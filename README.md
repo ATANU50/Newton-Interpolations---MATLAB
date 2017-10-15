@@ -7,7 +7,7 @@ This repository contains two MATLAB programs/codes for:
 2. Newton Backward Interpolation
 
 ## Story
-In my Numerical Analysis class, we (me + other students) have been assigned to write a program for these two methods. I tried searching Google for a pre-made program. But... I did not find any.
+In our Numerical Analysis class, we (me + other students) had been assigned to write a program for these two methods. I tried searching Google for a pre-made program. But... I did not find any.
 
 Yes, I had found few programs for Newton Forward Interpolation but they were hard to understand and were for fixed number of values.
 
