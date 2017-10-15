@@ -35,3 +35,10 @@ If you have found a bug, try to resolve yourself. If succeeded, make a pull requ
 Have a nice day and wonderful dreams at night!
 
 I've a website at: https://MFaheemAkhtar.com
+
+## Support ME :P
+If these codes helped you || my story made you smile || you are a rich person with thousands of bitcoins, consider sharing 50% to me. :P
+
+Well, kidding. You can support me by donating few bitcoins. This may help me learn new skills.
+
+Bitcoin: 1BieSUvNqn87oyysJz3n6VG6AdNg9G6g71
