@@ -1,0 +1,54 @@
+clc;
+clear all;
+
+x = input('Enter x: ');
+y = input('Enter y: ');
+
+req = input('Enter required x: ');
+
+rows = length(y);
+if(rows-1 > 4)
+   fprintf('\n\nThe program has NOT been designed to work with delta5 y and above, accuracy may drop.\n\n'); 
+end
+cols = rows+1;
+h = x(2) - x(1);
+
+table = zeros(rows, cols);
+
+% add data to the table
+for i = 1:rows
+    table(i, 1) = x(i);
+    table(i, 2) = y(i);
+end
+
+% find the deltas
+n = 1;
+for j = 3:cols
+    for i = 1:rows-n
+        table(i, j) = table(i+1, j-1) - table(i, j-1);
+    end
+    n = n +1;
+end
+
+% find the y0
+u = 0;
+for i = 1:rows
+   temp = (req-x(i))/h;
+   if(( temp > 0 && temp < 1))
+        u = temp;
+        pi = i;
+   end
+end
+
+
+deriv1 = (1/h)*((table(pi, 3) + ((2*u-1)/2)*table(pi,4) + ((3*u^2 -6*u +2)/6)*table(pi, 5) + ((4*u^3 - 18*u^2 + 22*u - 6)/24)*table(pi, 6)));
+deriv2 = (1/h^2)*((table(pi, 4) + (u-1)*table(pi,5) + ((u^2/2 -3*u/2 +11/12))*table(pi, 6)));
+deriv3 = (1/h^3)*((table(pi, 5) + (u-3/2)*table(pi,6)));
+deriv4 = (1/h^4)*((table(pi, 6)));
+
+disp(table);
+
+fprintf('1st derivative is: %f\n', deriv1);
+fprintf('2nd derivative is: %f\n', deriv2);
+fprintf('3rd derivative is: %f\n', deriv3);
+fprintf('4th derivative is: %f\n', deriv4);
